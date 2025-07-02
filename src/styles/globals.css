@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* TEST: debería verse este borde rosa */
+html {
+  outline: 5px solid hotpink !important;
+}
+/* Aquí puedes añadir tus estilos globales adicionales */

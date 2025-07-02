@@ -1,0 +1,44 @@
+.toolkit {
+  padding: 4rem 1rem;
+  background: #801072;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1.5rem;
+}
+.card {
+  background: #9c5151;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(78, 178, 11, 0.05);
+  transition: transform .2s, box-shadow .2s;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(74, 197, 16, 0.948);
+}
+.icon {
+  color: #f20101;
+  margin-bottom: 0.75rem;
+}
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}

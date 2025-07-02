@@ -1,0 +1,48 @@
+.testimonials {
+  padding: 1rem 1rem;
+  background: #f0f4ff;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.heading {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #1f2022;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.card {
+  background: #417ead;
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: 900px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.quote {
+  font-style: italic;
+  color: #070707;
+  margin-bottom: 1rem;
+}
+.name {
+  font-weight: 600;
+  color: #1f2022;
+  margin-bottom: 1rem;
+}
+.role {
+  font-size: 0.1rem;
+  color: #000000;
+}
