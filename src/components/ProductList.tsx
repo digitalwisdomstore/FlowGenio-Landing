@@ -26,7 +26,8 @@ const products = [
 
 const ProductList: React.FC = () => {
   const handleChat = (id: string, title: string) => {
-    event({ action: 'start_chat', category: 'landing', label: title, value: 1 });
+    // <-- Aquí corregimos la llamada:
+    event('start_chat', { category: 'landing', label: title, value: 1 });
     if ((window as any).chatbase?.setInitialMessages) {
       (window as any).chatbase.setInitialMessages([
         { role: 'user', content: `Hola, quiero saber más de "${title}"` },

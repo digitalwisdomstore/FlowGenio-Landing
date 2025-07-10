@@ -6,6 +6,11 @@ const items = [
   { Icon: Camera, title: 'Plantillas visuales', desc: 'Posts, stories y reels listos en segundos.' },
   { Icon: BarChart2, title: 'Métricas clave', desc: 'Aprendé a medir tu engagement y crecer.' },
   { Icon: Users, title: 'Comunidad VIP', desc: 'Red de creadores para colaboraciones.' },
+  { Icon: Users, title: 'Comunidad VIP', desc: 'Red de creadores para colaboraciones.' },
+  { Icon: Camera, title: 'Plantillas visuales', desc: 'Posts, stories y reels listos en segundos.' },
+  { Icon: BarChart2, title: 'Métricas clave', desc: 'Aprendé a medir tu engagement y crecer.' },
+  { Icon: Users, title: 'Comunidad VIP', desc: 'Red de creadores para colaboraciones.' },
+  { Icon: Users, title: 'Comunidad VIP', desc: 'Red de creadores para colaboraciones.' },
 ];
 
 const InfluencerToolkit: React.FC = () => (

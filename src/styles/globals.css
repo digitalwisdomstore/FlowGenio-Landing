@@ -1,8 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* TEST: debería verse este borde rosa */
+
+/* Importa la tipografía futurista Rajdhani */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rajdhani', sans-serif;
+  background-color: #000; /* o el color de fondo que prefieras */
+}
+
+/* TEST: si quieres ver tu contenido, puedes dejar este borde */
+/*
 html {
   outline: 5px solid hotpink !important;
 }
+*/
+
 /* Aquí puedes añadir tus estilos globales adicionales */

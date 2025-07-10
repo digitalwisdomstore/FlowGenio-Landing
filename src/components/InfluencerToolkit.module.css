@@ -1,44 +1,88 @@
-.toolkit {
-  padding: 4rem 1rem;
-  background: #801072;
+/* InfluencerToolkit.module.css */
+
+/* Importa la misma fuente futurista */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap');
+
+.influencerToolkit {
+  padding: 6rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
 }
+
 .container {
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
+
 .heading {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
   font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #ffffff;
+  color: #fff;
+  margin-bottom: 3rem;
 }
+
+/* Grid responsivo */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
 }
+
+/* Cards glassy con borde degradado rosa místico */
 .card {
-  background: #9c5151;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(78, 178, 11, 0.05);
-  transition: transform .2s, box-shadow .2s;
+  position: relative;
+  background: rgba(20, 5, 35, 0.3);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease;
 }
+
 .card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(74, 197, 16, 0.948);
+  transform: translateY(-4px);
 }
+
+/* Borde degradado externo */
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 1.5rem;
+  background: linear-gradient(135deg, #7e356e, #c56ba1, #f3bfdc);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
 .icon {
-  color: #f20101;
+  color: #c56ba1; /* rosa místico para iconos */
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #fff;
   margin-bottom: 0.75rem;
 }
-.card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
+
 .card p {
-  font-size: 0.95rem;
-  color: #555;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #e8dff0;
+  opacity: 0.9;
   line-height: 1.4;
 }

@@ -7,7 +7,8 @@ const LeadForm: React.FC = () => {
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
-    event({ action: 'subscribe', category: 'leadgen', label: email, value: 1 });
+    // <-- Aquí corregimos la llamada:
+    event('subscribe', { category: 'leadgen', label: email, value: 1 });
     alert('🔔 ¡Gracias! Te enviaremos tu demo gratis al correo.');
     setEmail('');
   };
@@ -19,16 +20,20 @@ const LeadForm: React.FC = () => {
         <p className={styles.subtitle}>
           Genera tu primer post o newsletter con AI — sin tarjeta de crédito.
         </p>
-        <form onSubmit={submit} className={styles.form}>
-          <input
-            type="email"
-            placeholder="Tu email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            required
-          />
-          <button type="submit">Obtener Demo</button>
-        </form>
+        <div className={styles.formCard}>
+          <form onSubmit={submit} className={styles.form}>
+            <input
+              type="email"
+              placeholder="Tu email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              required
+            />
+            <button type="submit" className={styles.button}>
+              Obtener Demo
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   );

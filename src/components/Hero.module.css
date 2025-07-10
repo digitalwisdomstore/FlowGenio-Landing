@@ -1,40 +1,99 @@
+/* Hero.module.css */
+
+/* Importa la tipografía futurista */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap');
+
 .hero {
-  background: linear-gradient(135deg, #4f2df7, #1b0f5a);
-  color: #fff;
-  padding: 6rem 1rem;
+  /* Gradient rosa místico */
+  background: linear-gradient(145deg, #3b0a3d 0%, #7e356e 35%, #c56ba1 65%, #f3bfdc 100%);
+  position: relative;
+  padding: 8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-.container {
-  max-width: 700px;
-  margin: 0 auto;
+/* Textura muy sutil sobre el gradient */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/path/to/tu-textura.png') center/cover;
+  opacity: 0.05;
+  pointer-events: none;
 }
 
-.title {
-  font-size: 2.75rem;
-  line-height: 1.2;
+.heroCard {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  padding: 3rem 2rem;
+  background: rgba(20, 5, 35, 0.3);
+  backdrop-filter: blur(12px);
+  border-radius: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* Borde degradado externo */
+.heroCard::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 2rem;
+  background: linear-gradient(135deg, #7e356e, #c56ba1, #f3bfdc);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.heroTitle {
+  font-family: 'Rajdhani', sans-serif;
   font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: #fff;
   margin-bottom: 1rem;
 }
 
-.subtitle {
+.highlight {
+  display: block;
+  color: #c56ba1;
+}
+
+.heroSubtitle {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 400;
   font-size: 1.125rem;
+  color: #e8dff0;
   margin-bottom: 2rem;
   opacity: 0.9;
 }
 
-.cta {
-  background-color: #84d4fa;
-  color: #000000;
-  border: none;
-  padding: 0.75rem 1.5rem;
+.heroCta {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
   font-size: 1rem;
-  font-weight: 600;
-  border-radius: 6px;
+  padding: 0.75rem 2rem;
+  background: #1d0f25;
+  color: #f3bfdc;
+  border: none;
+  border-radius: 1.5rem;
+  box-shadow:
+    inset 0 0 8px rgba(197, 107, 161, 0.6),
+    0 4px 16px rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.cta:hover {
-  background-color: #a0e6ff;
+.heroCta:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 0 12px rgba(197, 107, 161, 0.8),
+    0 6px 24px rgba(0, 0, 0, 0.6);
 }

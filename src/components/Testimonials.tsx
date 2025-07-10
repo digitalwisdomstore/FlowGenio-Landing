@@ -1,5 +1,6 @@
-import React from 'react';
-import styles from './Testimonials.module.css';
+// src/components/Testimonials.tsx
+import React from 'react'
+import styles from './Testimonials.module.css'
 
 const testimonials = [
   {
@@ -20,7 +21,7 @@ const testimonials = [
     avatar: '/avatars/ana.jpg',
     quote: 'Las plantillas y el chatbot me ahorran horas de trabajo diario.',
   },
-];
+]
 
 const Testimonials: React.FC = () => (
   <section className={styles.testimonials}>
@@ -38,6 +39,6 @@ const Testimonials: React.FC = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default Testimonials;
+export default Testimonials

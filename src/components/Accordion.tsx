@@ -14,7 +14,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, children }) => {
         type="button"
         className={styles.header}
         onClick={() => setOpen(prev => !prev)}
-        aria-expanded={open ? 'true' : 'false'}
+        aria-expanded={open}
       >
         <span>{title}</span>
         <span className={styles.icon}>{open ? '–' : '+'}</span>
